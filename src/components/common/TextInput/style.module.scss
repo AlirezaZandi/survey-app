@@ -1,0 +1,36 @@
+@import "../../../styles/global";
+
+.inputContainer {
+  width: 100%;
+  .input {
+    background-color: rgba($color: #fff, $alpha: 0.1);
+    border: none;
+    outline: 3px solid #043155;
+    border-radius: 8px;
+
+    font-size: optimized-font-size(3);
+    padding: 0.4rem 1rem;
+
+    color: white;
+
+    transition: all 0.2s;
+
+    &:focus,
+    &:focus:hover {
+      outline: 3px solid lighten($color: #043155, $amount: 10);
+      background-color: rgba($color: #fff, $alpha: 0);
+    }
+
+    &:hover {
+      outline: 3px solid lighten($color: #043155, $amount: 5);
+    }
+
+    &::placeholder {
+      color: rgba($color: #fff, $alpha: 0.4);
+    }
+  }
+
+  .label {
+    display: none;
+  }
+}

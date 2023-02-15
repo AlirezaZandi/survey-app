@@ -1,0 +1,23 @@
+@import "../../styles/global";
+
+.greeting {
+  padding: 0 2rem;
+
+  & > * {
+    margin-bottom: 2rem;
+  }
+  .title {
+    font-size: optimized-font-size(6);
+    font-weight: 700;
+  }
+
+  .description {
+    font-size: optimized-font-size(4);
+    padding-right: 1rem;
+    font-weight: lighter;
+  }
+
+  .start {
+    text-align: left;
+  }
+}

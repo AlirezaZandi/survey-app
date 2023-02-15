@@ -1,0 +1,13 @@
+@function optimized-font-size($font-size-in-small-screens) {
+  @return clamp(
+    $font-size-in-small-screens / 2 * 1rem,
+    ((($font-size-in-small-screens * 4) / 5) * 1vw) + 1rem,
+    1 * $font-size-in-small-screens * 1rem
+  );
+}
+
+@mixin disable-user-select {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}

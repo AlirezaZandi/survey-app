@@ -1,0 +1,32 @@
+@import "../../../styles/global";
+.btn {
+  padding: 0.5rem 4rem;
+  font-size: optimized-font-size(2.8);
+  cursor: pointer;
+  background-color: #ffc107;
+  border: none;
+  border-radius: 8px;
+  color: black;
+  font-weight: 700;
+  transition: all 0.1s;
+  outline: 0px solid #ffda6e;
+  @include disable-user-select;
+  &:focus:not(.disable) {
+    outline: 3px solid #ffda6e;
+    background-color: darken($color: #ffc107, $amount: 10);
+  }
+  &:hover:not(.disable) {
+    background-color: darken($color: #ffc107, $amount: 5);
+  }
+  &:focus:hover:not(.disable) {
+    background-color: darken($color: #ffc107, $amount: 10);
+  }
+  &.small {
+    padding: 0.8rem 2rem;
+    font-size: optimized-font-size(2);
+  }
+  &.disable {
+    background-color: lighten($color: #ffe390e0, $amount: 0);
+    cursor: auto;
+  }
+}

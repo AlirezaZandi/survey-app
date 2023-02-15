@@ -1,0 +1,72 @@
+@import "../../styles/global";
+.questionForm {
+  @media screen and (max-width: 700px) {
+    padding-bottom: 20rem;
+  }
+  & > * {
+    margin-bottom: 2rem;
+  }
+  .question {
+    padding: 0;
+    border: none;
+    & > *:not(:last-child) {
+      margin-bottom: 0;
+      @media screen and (min-width: 400px) {
+        margin-bottom: 1rem;
+      }
+    }
+    .title {
+      font-size: optimized-font-size(4);
+    }
+    .description {
+      font-size: optimized-font-size(1.5);
+      font-weight: 100;
+      margin-right: 2rem;
+    }
+    .scoreContainer {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: center;
+    }
+    .star {
+      cursor: pointer;
+    }
+    .option {
+      border: 2px solid white;
+      border-radius: 8px;
+      padding: 0.5rem 1rem;
+      width: 100%;
+      margin-bottom: 1rem;
+      font-size: optimized-font-size(2);
+      display: flex;
+      align-items: center;
+      background-color: rgba($color: #000000, $alpha: 0);
+      cursor: pointer;
+      transition: all 0.2s;
+      @include disable-user-select;
+      &:hover {
+        background-color: rgba($color: #000000, $alpha: 0.2);
+      }
+      &.selected {
+        background-color: white;
+        color: rgba($color: #000000, $alpha: 0.8);
+        .optionNumber {
+          background-color: rgba($color: #000000, $alpha: 0.1);
+        }
+      }
+      .optionNumber {
+        width: 30px;
+        height: 30px;
+        font-size: optimized-font-size(1.5);
+        text-align: center;
+        display: inline-block;
+        border-radius: 8px;
+        background-color: rgba($color: #fff, $alpha: 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 1rem;
+      }
+    }
+  }
+}
